@@ -32,9 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
 
-    Color _greenColor = Color(0xff2a9d8f);
-    Color _redColor = Color(0xffe76f51);
-    Color _blueColor = Color(0xff37A5C6);
+    Color _greenColor = const Color(0xff2a9d8f);
+    Color _redColor = const Color(0xffe76f51);
+    Color _blueColor = const Color(0xff37A5C6);
 
 
     return Scaffold(
@@ -67,12 +67,12 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
             children: [
               pokedex!= null ? Expanded(
-                child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                child: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   childAspectRatio: 1.4
                 ),
                   shrinkWrap: true,
-                    physics: BouncingScrollPhysics()
+                    physics: const BouncingScrollPhysics()
                   ,itemCount: pokedex?.length,itemBuilder:(context, index){
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 : pokedex![index]['type'][0] == "Fighting" ? Colors.orange : pokedex![index]['type'][0] == "Bug" ? Colors.lightGreenAccent
                                 : pokedex![index]['type'][0] == "Ghost" ? Colors.deepPurple : pokedex![index]['type'][0] == "Normal" ? Colors.black26 : Colors.pink,
                             
-                            borderRadius: BorderRadius.all(Radius.circular(25))
+                            borderRadius: const BorderRadius.all( Radius.circular(25))
                           ),
 
 
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: CachedNetworkImage(imageUrl: pokedex![index]['img'],
                                         height: 100,
                                         fit: BoxFit.fitHeight,
-                                        placeholder: (context,url) => Center(
+                                        placeholder: (context,url) => const Center(
                                           child: CircularProgressIndicator(),
                                         )
                                     ),
@@ -124,11 +124,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Container(
                                     child: Padding(
                                       padding: const EdgeInsets.only(left:10.0, right: 10, top: 5, bottom: 5),
-                                      child: Text(pokedex![index]['type'][0], style: TextStyle(color: Colors.white,
+                                      child: Text(pokedex![index]['type'][0], style: const TextStyle(color: Colors.white,
                                           shadows: [
                                             BoxShadow(
                                                 color: Colors.blueGrey,
-                                                offset: Offset(0,0),
+                                                offset:  Offset(0,0),
                                                 spreadRadius: 1.0,
                                                 blurRadius: 15
                                             )
@@ -140,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                     ),
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                                        borderRadius: const BorderRadius.all(Radius.circular(20)),
                                         color: Colors.black.withOpacity(0.5)
                                     ),
                                   ),
@@ -148,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Positioned(
                                   top: 30,
                                   left: 15,
-                                  child: Text(pokedex![index]['name'],style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white,
+                                  child: Text(pokedex![index]['name'],style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white,
                                       shadows: [
                                         BoxShadow(
                                             color: Colors.blueGrey,
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 })
-              ): Center(
+              ): const Center(
                 child: CircularProgressIndicator(),
               )
 
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           Positioned(
             top: 0,
-            child: Container(
+            child: SizedBox(
               height: 150,
               width: width,
             ),

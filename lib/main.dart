@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
 void main(){
-  runApp(Pokemon());
+  runApp(const Pokemon());
 }
 
 class Pokemon extends StatelessWidget {

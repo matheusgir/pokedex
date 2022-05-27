@@ -8,7 +8,7 @@ class Pokedex {
       // ignore: deprecated_member_use
       pokemon = <Pokemon>[];
       json['pokemon'].forEach((v) {
-        pokemon.add(new Pokemon.fromJson(v));
+        pokemon.add(Pokemon.fromJson(v));
       });
     }
   }
@@ -77,13 +77,13 @@ class Pokemon {
     if (json['next_evolution'] != null) {
       nextEvolution = <NextEvolution>[];
       json['next_evolution'].forEach((v) {
-        nextEvolution.add(new NextEvolution.fromJson(v));
+        nextEvolution.add(NextEvolution.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['num'] = num;
     data['name'] = name;
@@ -120,7 +120,7 @@ class NextEvolution {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['num'] = num;
     data['name'] = name;
     return data;

@@ -60,7 +60,7 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(0.2),
-                  borderRadius: const BorderRadius.all(const Radius.circular(20))
+                  borderRadius: const BorderRadius.all(Radius.circular(20))
                 ),
               
               )
@@ -97,7 +97,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         children: [
                           Container(
                             width: width * 0.3,
-                            child: const Text('Name', style: const TextStyle(color: Colors.blueGrey, fontSize: 17),),
+                            child: const Text('Name', style: TextStyle(color: Colors.blueGrey, fontSize: 17),),
                           ),
                           Container(
                             child: Text(widget.pokemonDetail['name'], style: const TextStyle(color: Colors.black, fontSize: 17),),
@@ -112,7 +112,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         children: [
                           Container(
                             width: width * 0.3,
-                            child: const Text('Height', style: const TextStyle(color: Colors.blueGrey, fontSize: 17),),
+                            child: const Text('Height', style: TextStyle(color: Colors.blueGrey, fontSize: 17),),
                           ),
                           Container(
                             child: Text(widget.pokemonDetail['height'], style: const TextStyle(color: Colors.black, fontSize: 17),),
@@ -157,7 +157,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         children: [
                           Container(
                             width: width * 0.3,
-                            child: const Text('Weakness', style: const TextStyle(color: Colors.blueGrey, fontSize: 17),),
+                            child: const Text('Weakness', style: TextStyle(color: Colors.blueGrey, fontSize: 17),),
                           ),
                           Container(
                             child: Text(widget.pokemonDetail['weaknesses'].join(", "), style: const TextStyle(color: Colors.black, fontSize: 17),),
@@ -172,7 +172,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         children: [
                           Container(
                             width: width * 0.3,
-                            child: const Text('Pre Evolution', style: const TextStyle(color: Colors.blueGrey, fontSize: 17),),
+                            child: const Text('Pre Evolution', style: TextStyle(color: Colors.blueGrey, fontSize: 17),),
                           ),
                           Container(
                               child: widget.pokemonDetail['prev_evolution'] != null ?
@@ -189,7 +189,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                     );
                                   },
                                 ),
-                              ): const Text("Just Hatched", style: const TextStyle(color: Colors.black, fontSize: 17),)
+                              ): const Text("Just Hatched", style: TextStyle(color: Colors.black, fontSize: 17),)
                           ),
 
                         ],
@@ -218,7 +218,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                       );
                                     },
                                   ),
-                                ): const Text("Maxed Out", style: const TextStyle(color: Colors.black, fontSize: 17),)
+                                ): const Text("Maxed Out", style: TextStyle(color: Colors.black, fontSize: 17),)
                           ),
 
                         ],
